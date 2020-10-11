@@ -28,3 +28,10 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # Add ServerChan-DINGDING
 git clone https://github.com/zzsj0928/luci-app-serverchand package/luci-app-serverchand
+
+
+# Fix Multi-use on one physical port 
+# 修复 5.4.68-5.4.69内核 于 MIPS 架构 单线复用BUG
+# 取自 @AmadeusGhost， 原更新内容为 generic: limit commit "ramips/mediatek: improve GRO performance, fix PPE packet parsing" to mediatek target only
+wget https://github.com/AmadeusGhost/lede/commit/7a49d2cf99bd59506bbd9239e0bde81a61f93c40.patch
+git apply 7a49d2cf99bd59506bbd9239e0bde81a61f93c40.patch
